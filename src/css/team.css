@@ -1,0 +1,160 @@
+
+.owl{
+    position: absolute;
+    float: right;
+    width: 300px;
+    z-index: 1;
+    margin-bottom: 70%;
+}
+.team  {
+    position: relative;
+    background-color: #73A73C;
+    height: 120vh;
+
+}
+.teamvideo{
+    width: 700px;
+    margin-left: 30px;
+    border-radius: 30px;
+}
+.video {
+    width: 150px;
+}
+.team img{
+    position: absolute;
+    margin-top: -20%;
+    width: 100%;
+    z-index: 1;
+}
+.teambord img{
+    width: 400px;
+    z-index: 1;
+    margin-top: 39%;
+   
+   
+}
+.teambord{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.teambord p{
+    position: absolute;
+    font-size: 45px;
+    color:#FEEEAB;
+    top:200px;
+    z-index: 1;
+    text-align: center;
+   margin-left: 1%;
+    
+}
+.teambord h1{
+    padding: 10px;
+    margin-top: 10px;
+    
+}
+.videobox{
+   display: flex;
+   margin-top: 380px;
+   align-items: center;
+   /* justify-content: space-around; */
+}
+.videobox h1{
+    top: 50px;
+}
+.teamtxt h1{
+   text-align: center;
+   padding: 30px;
+   margin-top: 250px;
+   right: 400px;
+   font-size: 90px;
+   color: transparent;
+   -webkit-text-stroke: 1px #FEEEAB;
+   position: absolute;
+}
+.teamtxt p{
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+    margin-top: -90px;
+    color: antiquewhite;
+    flex-wrap: wrap;
+   
+}
+.teamtxt{
+    padding: 20px;
+}
+.branch{
+    width: 20px;
+    top:120px;
+    border-radius: 10px;
+}
+@media screen and (max-width:600px) {
+    .branch{
+        width: 50%;
+        top:40px;
+        border-radius: 10px;
+    }
+    .owl{
+        position: absolute;
+        float: right;
+        width: 200px;
+        z-index: 1;
+        margin-top: 160px;
+    }
+    .teambord img{
+        width: 300px;
+        z-index: 1;
+        margin-top: 65%;
+    }
+    .video {
+        width: 900px;
+    }
+    .team  {
+        position: relative;
+        background-color: #73A73C;
+        height: 130vh;
+    
+    }
+    .videobox{
+        display: block;
+        margin-top: 100%;
+        align-items: center;
+        /* justify-content: space-around; */
+     }
+     .teamtxt p{
+        position: absolute;
+        text-align: center;
+        font-size: 25px;
+        font-family: 'Caveat', cursive;
+        margin-top: -20px;
+        color: antiquewhite;
+       
+    }
+    .teamtxt h1{
+        text-align: center;
+        padding: 30px;
+        margin-top: 250px;
+        right: 100px;
+        font-size: 90px;
+        color: transparent;
+        -webkit-text-stroke: 1px #FEEEAB;
+        position: absolute;
+     }
+     .teambord p{
+        position: absolute;
+        font-size: 30px;
+        color:#FEEEAB;
+        top:100px;
+        z-index: 1;
+        text-align: center;
+       
+        
+    }
+    .teamvideo{
+        width: 400px;
+        margin-left: 90px;
+        border-radius: 30px;
+    }
+}

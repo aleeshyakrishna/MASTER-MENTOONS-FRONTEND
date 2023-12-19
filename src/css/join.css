@@ -1,0 +1,93 @@
+.joincointainer{
+    background-color: #73A73C;
+    height: 100vh;
+    width: 100%;
+
+}
+.about-txt{
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+.about-txt h1{
+    text-align: center;
+    font-size:90px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    margin-top: 20px;
+}
+.about-txt p{
+    text-align: center;
+    line-height: 3rem;
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+    color: #FEEEAB;
+    
+}
+.grass img{
+    width: 300px;
+    
+    gap: 50px;
+   
+}
+.grass{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.grass p{
+    position: absolute;
+    font-size: 60px;
+    color:#FEEEAB;
+    top:80px;
+   
+    
+}
+.bird{
+    
+    width: 400px;
+    
+}
+
+.birdiv{
+    position: absolute;
+    top: 820px;
+}
+.down img{
+    position: absolute;
+    width: 100%;
+    bottom: -169%;
+    z-index: 2;
+}
+@media screen and (max-width:600px){
+    .joincointainer{
+        background-color: #73A73C;
+        height: 140vh;
+        width: 100%;
+    
+    }
+    .down img{
+        position: absolute;
+        width: 100%;
+        bottom: -162%;
+        z-index: 2;
+    }
+    .about-txt h1{
+        text-align: center;
+        font-size:50px;
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        margin-top: 20px;
+    }
+    .about-txt p{
+        text-align: center;
+        line-height: 2rem;
+        font-family: 'Caveat', cursive;
+        font-size: 20px;
+    }
+    .about-txt{
+        display: block;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
+}

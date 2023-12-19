@@ -1,0 +1,122 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+nav img{
+
+    width: 150px;
+    margin-bottom: -50px;
+    object-fit:contain;
+    transform: translateX(10);
+    margin-left: 50px;
+}
+nav .logo{
+    background-color: #D12881;
+    width: 170px;
+    height: 100px;
+    border-radius: 0px 0px 30px 30px ;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    height: 80px;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    border-bottom: 1px solid  #D12881 ;
+    
+}
+nav .nav-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+nav .nav-links li{
+    padding: 10px;
+    font-size: 26px;
+    font-weight: 500;
+    color:  #D12881;
+    font-family: 'Caveat', cursive;
+    right: 130px;
+}
+nav .nav-links li:hover{
+    background-color :#D12881;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+   
+}
+/* nav .nav-links li:active{
+    background-color: #D12881;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+} */
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#D12881;
+    font-weight: 500;
+    font-size: 30px;
+    display: none;
+}
+@media screen and (max-width:600px) {
+    nav .logo{
+        background-color: #D12881;
+        width: 120px;
+        height: 100px;
+        border-radius: 0px 0px 30px 30px ;
+        
+    }
+    .icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:#D12881;
+        font-weight: 500;
+        font-size: 30px;
+        margin-right: 20px;
+        
+    }
+    nav .nav-links{
+        position: absolute;
+        width: 100%;
+        top:80px;
+       
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        background-color:#fff;
+    }
+    nav .nav-links.active{
+        position: absolute;
+        width: 100%;
+        top:80px;
+        left: -100%;
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        background-color: aqua;
+        transition: 4s ease-in;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        height: 80px;
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+        border-bottom: 1px solid  #D12881 ;
+       
+    }
+}

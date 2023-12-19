@@ -1,0 +1,84 @@
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  top: -100px;
+  left: 60px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  
+
+  /* Center slide text vertically */
+  
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 10%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.caro{
+  display: flex;
+
+  
+  
+}
+.carotxt{
+  margin-right: 1%;
+  
+}
+.carotxt h1{
+  font-size: 90px;
+  color: transparent;
+    -webkit-text-stroke: 1px #fff;
+  padding: 10px;
+}
+.carotxt p{
+  font-size: 22px;
+  color: #eee;
+  font-family: 'Caveat', cursive;
+}
+@media screen and (max-width:600px){
+  .swiper-slide img {
+    
+    width: 100%;
+    height: 50%;
+   
+  }
+  .carotxt h1{
+    font-size: 30px;
+    color: transparent;
+      -webkit-text-stroke: 1px #fff;
+    padding: 10px;
+  }
+  .swiper {
+    width: 50%;
+    height: 50%;
+    top: -50px;
+
+  }
+  .caro{
+    display: block;
+  }
+}

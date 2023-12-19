@@ -1,0 +1,122 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Passion One', sans-serif;
+}
+.header{
+    background-image: linear-gradient(to right top, #3786BF,  #fff, #3786BF, #3786BF, #ffffff);
+   
+    height: 100vh;
+    width: 100%;
+   
+}
+.wave{
+    position: absolute;
+    margin-top: 450px;
+    width: 100%;
+    height: 150px;
+    
+}
+.waveup{
+    position: absolute;
+    margin-top: 150px;
+    width: 100%;
+    height: 320px;
+}
+.wavecontainer{
+    position: absolute;
+    margin-top: 250px;
+    width: 100%;
+}
+.headertxt{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.headertxt h1{
+    font-size: 90px;
+    margin-left: 10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    margin-top: 20px;
+}
+.headertxt p{
+    font-size: 90px;
+    margin-left: 350px;
+}
+.headertxt p:nth-child(3){
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+}
+.vanimg img{
+        margin-left: 920px;
+        width: 600px;
+        z-index: 2;
+        position: absolute;
+        margin-top: -100px;
+       
+}
+.sun{
+    position: absolute;
+    width: 200px;
+    top: 80px;
+    left: 790px;
+}
+.cloud {
+width: 200px;
+bottom: 200px;
+
+}
+marquee{
+    top: 100px;
+  position: absolute;
+  z-index: 1;
+}
+/* .maheshsir img{
+    position: absolute;
+    width: 100px;
+   float: right;
+    z-index: 1;
+} */
+@media screen and (max-width:600px){
+    .maheshsir {
+      width: 350px;
+      margin-left: -10%;
+      margin-top: 50px;
+    }
+    .headertxt h1{
+        font-size: 70px;
+        margin-left: 180px;
+        padding: 10px;
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        margin-top: 30px;
+    }
+    .sun{
+        position: absolute;
+        width: 200px;
+        top: 80px;
+        left: 270px;
+    }
+    .headertxt p{
+        font-size: 40px;
+        margin-left: 200px;
+    }
+    .headertxt p:nth-child(3){
+        font-size: 28px;
+        font-family: 'Caveat', cursive;
+        z-index: 1;
+        position: absolute;
+    }
+    .vanimg img{
+        margin-left: 120px;
+        width: 400px;
+        z-index: 2;
+        position: absolute;
+        margin-bottom: 100px;
+       display: none;
+}
+}

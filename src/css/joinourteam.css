@@ -1,0 +1,140 @@
+.main-join{
+    position: relative;
+   ;
+   background-color: antiquewhite;
+   z-index: 1;
+   margin-top: -5%;
+   height: 170vh;
+
+}
+.apply-bord img{
+    width: 300px;
+    margin-top: 120px;
+    gap: 50px;
+    
+   
+}
+.apply-bord{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.lightwave{
+    margin-top: 50px;
+    width: 100%;
+}
+.apply-bord p{
+    position: absolute;
+    font-size: 30px;
+    color:#FEEEAB;
+    margin-top: 50px;
+    margin-left: 1%;
+    
+}
+.brounwave{
+    position: absolute;
+    margin-top: -1%;
+    width: 100%;
+  }
+.join-container{
+    display: flex;
+    width: 100%;
+}
+.btn-color {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: #183153;
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    border: none;
+    color: #fff;
+    font-family: 'Caveat', cursive;
+
+   }
+   
+   .btn-color:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #FFD401;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+    color: #fff;
+   }
+   
+   .btn-color:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+    color: #fff;
+   }
+   
+   .btn-color span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.155em;
+    font-weight: 400;
+    /* letter-spacing: 0.3em; */
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Caveat', cursive;
+    
+   }
+   
+   .btn-color:hover span {
+    color: #183153;
+    animation: scaleUp 0.3s ease-in-out;
+   }
+   
+   @keyframes scaleUp {
+    0% {
+     transform: scale(1);
+    }
+   
+    50% {
+     transform: scale(0.95);
+    }
+   
+    100% {
+     transform: scale(1);
+    }
+   }
+   @media screen and (max-width:600px){
+    .brounwave{
+        position: absolute;
+        margin-top: -1%;
+        width: 100%;
+      }
+      .apply-bord img{
+        width: 300px;
+        margin-top: 20px;
+        gap: 50px;
+        
+       
+    }
+    .apply-bord{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .apply-bord p{
+        position: absolute;
+        font-size: 30px;
+        color:#FEEEAB;
+        margin-top: -50px;
+        margin-left: 2%;
+        
+    }
+    .lightwave{
+       
+        margin-top: 110px;
+    }
+   }

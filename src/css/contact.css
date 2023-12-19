@@ -1,0 +1,50 @@
+.contact-main{
+    background-color: #73A73C;
+    height: 115vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 140px;
+    position: relative;
+
+}
+
+.information p{
+    font-size: 22px;
+  color: aliceblue;
+    margin: 10px;
+}
+.information h1{
+    color: blanchedalmond;
+    font-size: 50px;
+}
+.write-us{
+    margin-top: 260px;
+}
+.write-us h1{
+    position: absolute;
+   margin-top: 90px;
+    color: blanchedalmond;
+    font-size: 50px;
+}
+
+@media screen and (max-width:600px){
+    .contact-main{
+        background-color: #73A73C;
+        height: 175vh;
+        width: 100%;
+        display: block;
+        margin-top: 20px
+    }
+    .information {
+        position: absolute;
+        margin-top: 150px;
+        margin-left: 120px;
+    }
+    .write-us{
+        position: absolute;
+        margin-top: 500px;
+        margin-left: 120px;
+    }
+}
