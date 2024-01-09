@@ -1,0 +1,156 @@
+.signup-main-container{
+    background-color: #F79F07;
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fb-icon{
+    position: absolute;
+    color: #316FF6;
+    font-size: 40px;
+    margin-top: 3%;
+    margin-left: 5%;
+  }
+  .pass{
+    margin-left: 50%;
+  }
+  .pass-icons{
+    position: absolute;
+    color: black;
+    margin-left:  28%;
+    margin-top: -97px;
+    font-size: 30px;
+    z-index: 1;
+  }
+  .gog-icon{
+    position: absolute;
+    margin-top: 2%;
+    font-size: 40px;
+    z-index: 1;
+    margin-top: 3%;
+    margin-left: 5%;
+  
+  }
+  .right-side-box{
+    background-image: url('../Images/background.png');
+    width: 50%;
+    height: 120vh;
+    background-position: center;
+    background-size: cover;
+  }
+  .group-image-signup{
+    width: 90%;
+    margin-top:2%;
+    margin-left: 6%;
+
+  }
+  .left-side-box-signup h4{
+    position: absolute;
+margin-top:-2%;
+margin-left:35%;
+    color: aliceblue;
+  }
+  .logo-signup-new{
+    /* width: 398px; */
+  }
+  .left-side-box-signup h1{
+    position: absolute;
+    margin-top: -150px;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  margin-left: 2%;
+  }
+  .left-side-box-signup span{
+    position: absolute;
+    margin-top: -5%;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+    margin-left: 15%;
+  }
+  
+  .signup-input-new input{
+    width: 100%;
+    margin-left: 20%;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 40px;
+    box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+  }
+  .signup-input-new span{
+    position: absolute;
+    margin-left: 35%;
+  }
+  .signup-btn{
+    position: absolute;
+    margin-left: 5%;
+    background-color: white;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+  }
+  .facebook-login-new{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100%;
+    margin-left: 40%;
+   
+  }
+  
+  .gog-box-new h3{
+    z-index: 1;
+    margin-top: 15px;
+    margin-left: 30%;
+  }
+  .fb-box-new{
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    height: 60px;
+    margin-left: 15%;
+    margin-top: -30%;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+    
+  }
+  .fb-box-new h3{
+    margin-top: 15px;
+    margin-left: 25%;
+  }
+  .gog-box-new{
+    position: absolute;
+    background-color: white;
+    width: 20%;
+    height: 60px;
+   display: flex;
+   margin-left: -7%;
+   margin-top: -30%;
+   margin-right: 20px;
+   border-radius: 10px;
+   box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+  }
+  .left-side-box-signup img{
+    margin-left: 50%;
+    width: 400px;
+  }
+  .left-side-box-signup h2{
+    position: absolute;
+    margin-top: 85px;
+    margin-left: 18%;
+  }
+  .left-side-box-signup p{
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: 80px;
+  }

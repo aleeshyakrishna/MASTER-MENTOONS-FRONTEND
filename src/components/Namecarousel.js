@@ -5,35 +5,55 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 import Lottie from 'lottie-react'
 import Flight from '../animation/Flight.json'
-import bord from '../Images/bord.png'
-import grndownwave from '../Images/grndownwave.png'
-import skywave from '../Images/skywave.png'
+import { BsPersonArmsUp } from "react-icons/bs";
+import Thameem from '../Images/Thameem.jpg'
 const Namecarousel = () => {
-    const settings = {
+    var settings = {
         dots: true,
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
   return (
-    <div className="main">
-              <img src={grndownwave} className='top-greean-pic'/>
+    <div className="main-caro">
+            
         <div className="team-board"  data-aos="zoom-in-down"
-        data-aos-duration="1000">
-    
-    <img src={bord} 
-    />
-   
-    <p>Our Team</p>
+        data-aos-duration="1000"> 
   </div>
-        <Lottie animationData={Flight}   data-aos-duration="1000" data-aos="fade-right" className='flight'/>
           <div className='w-3/4 m-auto'>
         <div className='mt-20'>
         <Slider {...settings}>
             {data.map((d)=>(
                 <div className='bg-white h-[370px] text-black rounded-xl'>
-                    <div className=' h-76  rounded-t-xl bg-indigo-500 flex justify-center item-center'>
+                    <div className=' h-23  rounded-t-xl bg-indigo-500 flex justify-center item-center'>
                         <img src={d.img} className='my-5 h-44 w-44 rounded-full'/>
                  </div>
 
@@ -47,7 +67,7 @@ const Namecarousel = () => {
             </Slider >
         </div>
     </div>
-    <img src={skywave} className='skywave' />
+ 
     </div>
   
   )
@@ -69,11 +89,7 @@ const data = [
     img : `https://mentoons.com/img/team-03.jpg`,
     position : `Digital Marketing`
     },
-    {
-        name : `Manideep Kumar`,
-    img : `https://mentoons.com/img/team-04.jpg`,
-    position : `Web Developer`
-    },
+    
     {
         name : `Dhinesh  Kumar.G`,
     img : `https://mentoons.com/img/team-08.jpg`,
@@ -90,10 +106,25 @@ const data = [
     position : `Sketch Artist`
     },
     {
-        name : `Sanker`,
+        name : `Sankar`,
     img : `https://mentoons.com/img/team-05.jpg`,
     position : `Sketch Artist`
-    }
+    },
+    {
+    name : `Dilsha`,
+    img : require("../Images/alisha.jpg"),
+    position : `Backend Developer`
+    },
+    {
+      name : `Aleesha`,
+      img : require("../Images/dilsha.jpg"),
+      position : `Backend Developer`
+      },
+    {
+      name : `Thameem Ansari`,
+  img :require("../Images/Thameem.jpg"),
+  position : `Frontend Developer`
+  },
     
     
 ]

@@ -4,19 +4,22 @@ import nav from '../css/nav.css'
 import { TfiClose } from "react-icons/tfi";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
-import Teampage from './Teampage';
+import { useNavigate } from 'react-router-dom'
+import Logbtn from './Logbtn';
 
 const Navbar = () => {
+
+   const navigate = useNavigate()
 
      const [open,setopen]= useState(false);
 
      const handleClick = () => setopen(!open);
-     const closeMenu = () => setopen(false)
+     const closeMenu = () => setopen(true)
 
   return (
     <div>
         <nav>
-          <img src={menlogo}  className='logo'/>
+        <img src={menlogo}  className='logo-for-mob'/>
           <ul className={ open ? 'nav-links ' : 'nav-links active'}>
         <li onClick={closeMenu}><Link 
            to="hero"
@@ -63,6 +66,7 @@ const Navbar = () => {
            duration={1200}>
             Gallery
            </Link> </li> 
+           <img src={menlogo}  className='logo'/>
         <li onClick={closeMenu}><Link 
            to="join"
            spy={true}
@@ -81,16 +85,7 @@ const Navbar = () => {
            offset={-500}
            duration={1200}>
            Contact </Link> </li> 
-        <li onClick={closeMenu}><Link 
-           to="hero"
-           spy={true}
-           smooth={true}
-           hashSpy={true}
-           offset={50}
-           duration={1200}>
-            Youtube 
-           </Link> </li> 
-        <li onClick={closeMenu}><Link 
+           <li onClick={closeMenu}><Link 
            to="hero"
            spy={true}
            smooth={true}
@@ -100,9 +95,11 @@ const Navbar = () => {
             Career
            </Link> </li> 
        
+       <Logbtn />
+        
             
           </ul>
-          <Teampage />
+        
           <div onClick={handleClick} className="icons">
             {
               open ?   <TfiClose /> : <CiMenuFries /> 

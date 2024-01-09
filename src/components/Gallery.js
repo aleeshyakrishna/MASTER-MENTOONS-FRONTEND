@@ -1,9 +1,8 @@
 import React from 'react'
-import bord from '../Images/bord.png'
 import '../css/gallery.css'
 import Lottie from 'lottie-react'
 import gallery from '../animation/gallery.json'
-
+import { BsPersonArmsUp } from "react-icons/bs";
 const Gallery = () => {
   const data =[
     
@@ -41,15 +40,13 @@ const Gallery = () => {
   return (
     <div className='image-gallery'>
       <Lottie animationData={gallery} className='glry-anime' />
-        <div className="gallery-pic"  data-aos="zoom-in-down"
-        data-aos-duration="1000">
-    
-    <img src={bord} id='gallery'
-    />
-   
-    <p>OUR GALLERY</p>
-  </div>
 
+      <div className="join-heading-gallry">
+
+<BsPersonArmsUp className='per-icons'/>
+<BsPersonArmsUp className='per-iconsa'/>
+<h1>OUR GALLERY</h1>
+  </div>
       <div>
         <div className='gallery-photos'> 
           {

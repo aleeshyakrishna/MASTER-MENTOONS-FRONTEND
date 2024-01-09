@@ -1,172 +1,107 @@
 .workshop{
-    background-color: #0B0A23;
+    background-image: url('../Images/bgdots.png');
+    height: 100vh;
     width: 100%;
-    height: 200vh;
-    background-image: url('../Images/star.png');
-    position: relative;
-    z-index: 1;
 }
-.moon{
-    width: 400px;
-   float: right;
-}
-.grasss{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.grasss p{
-    position: absolute;
-    font-size: 60px;
-    color:#FEEEAB;
-    margin-top:200px;
-    left: 54%;
-   
-    
-}
-.grasss img{
-    width: 300px;
-    margin-top:250px;
-    margin-left: 300px;
-}
-
-.boy img{
-    width: 200px;
-    margin-left: 30%;
-    border-radius: 100%;
-
-}
-.boy summary{
-    font-size: 20px;
-    color: #FEEEAB;
-    background-color: royalblue;
-    width: 360px;
-    padding: 10px;
-    margin-left: 30px;
-    margin-top: 20px;
-}
-.boy ul li{
-    font-family: 'Caveat', cursive;
-    font-size: 24px;
-    list-style: none;
-}
-.boy H1{
-    text-align: center;
-    padding: 10px;
-}
-.boy{
-   border-radius: 20px;
-    background-color: bisque;
-    height: 660px;
-    width: 560px;
-}
-/* <--girl--> */
-.girl img{
-    width: 200px;
-    margin-left: 30%;
-    border-radius: 100%;
-
-}
-.girl summary{
-    font-size: 20px;
-    color: #FEEEAB;
-    background-color: royalblue;
-    width: 360px;
-    padding: 10px;
-    margin-left: 30px;
-    margin-top: 20px;
-}
-.girl ul li{
-    font-family: 'Caveat', cursive;
-}
-.girl H1{
-    text-align: center;
-    padding: 10px;
-}
-.girl{
+.workshop-box{
+    background-color: #FDFBE8;
+    margin-top: 70px;
+    margin-left: 10%;
+    width: 80%;
+    height: 70%;
     border-radius: 20px;
-    background-color: bisque;
-    height: 660px;
-    width: 560px;
 }
-.agegroup{
+
+
+.main-Workshop-conatiner{
     display: flex;
-    /* justify-content: space-around; */
-    margin-left: 170px;
-    gap: 4rem;
-    
+    gap: 7rem;
+    align-items: center;
+    margin-top: 3%;
 }
-@media screen and (max-width:600px){
-    .grasss p{
-        position: absolute;
-        font-size: 50px;
-        color:#FEEEAB;
-        top: -50px;
-        left: 35%;
-       
-        
-    }
-    .boy ul li{
-        font-family: 'Caveat', cursive;
-        font-size: 15px;
-        list-style: none;
-    }
-    .boy summary{
-        font-size: 20px;
-        color: #FEEEAB;
-        background-color: royalblue;
-        width: 360px;
-        padding: 10px;
-        margin-left: 30px;
-        margin-top: 20px;
-    }
-    .grasss img{
-        width: 300px;
-        margin-top:70px;
-        margin-left: 40px;
-    }
-    .moon{
-        width: 400px;
-        position: absolute;
-        margin-left: -90px;
-       
-    }
-    .agegroup{
-        display: block;
-        margin-top: 20px;
-        margin-left: 107px;
-        
-    }
-    .girl summary{
-        font-size: 20px;
-        color: #FEEEAB;
-        background-color: royalblue;
-        width: 260px;
-        padding: 10px;
-        margin-left: 30px;
-      
-    }
-    .boy{
-   
-        background-color: bisque;
-        height: 660px;
-        width: 400px;
-        margin-left: -25px;
-    }
-    .girl{
-   
-        background-color: bisque;
-        height: 660px;
-        width: 400px;
-        margin-left: -25px;
-        margin-top: 100px;
-    }
+.Workshop-image{
+    background-image: url('../Images/kidsbg.png');
+   margin-left: 5%;
+    border: 5px solid #34327C;
+    border-radius: 50%;
+    margin-top: 5%;
+    box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+
+}
+.Workshop-image img{
+    background-image: url('../Images/kidsbg.png');
+    border-radius: 50%;
+    width: 400px;
+
+}
+.container-workshpo h1{
+font-size: 50px;
+font-family: 'Archivo Black', sans-serif;
+}
+.workshop-side-btns button{
+    background-color: #34327C;
+    padding: 20px;
+    color: aliceblue;
+    border-radius: 10px 10px 0px 0px ;
+}
+.workshop-side-btns button:hover{
+    background-color:  #D12881 ;
+}
+.workshop-side-btns{
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 35%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  
+}
+/* empoer css */
+
+@media screen and (max-width:600px) {
     .workshop{
-        background-color: #0B0A23;
-        width: 100%;
-        height: 270vh;
-        background-image: url('../Images/star.png');
-        position: relative;
-        z-index: 1;
+        margin-top: 65%;
+    }
+    .main-Workshop-conatiner{
+        margin-top: 65%;
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+       
+    }
+    .workshop-box{
+        /* background-color: #FDFBE8;
+        margin-top:10%;
+        margin-left: 10%;
+        width: 40%;
+        height: 70%;
+        border-radius: 20px; */
+        
+    }
+    
+    .workshop-side-btns button{
+        position: absolute;
+        background-color: #34327C;
+        padding: 20px;
+        color: aliceblue;
+        border-radius: 10px 10px 0px 0px ;
+        margin-top: -76px;
+        margin-left: 20px;
+        
+    }
+    .workshop-side-btns button:hover{
+        background-color:  #D12881 ;
+    }
+    .Workshop-image img{
+        margin-top: 100px;
+        margin-left: -120px;
+        border-radius: 50%;
+        width: 200px;
+        position: absolute;
     }
 }
+
+
+
+
+ 

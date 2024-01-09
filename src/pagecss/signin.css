@@ -1,91 +1,129 @@
-h1{
-    text-align: center;
+.signup-main-container-new{
+  background-color: #F79F07;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /* Add your background pattern here */
-    --sz: 15px;
-    --c0: #000;
-    --c1: #c71175;
-    --ts: 50% / calc(var(--sz) * 8) calc(var(--sz) * 16);
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    --dot: var(--c1) 0 calc(var(--sz) * 0.78),
-      #fff0 calc(calc(var(--sz) * 0.78) + 1px) 100%;
-    --dot2: radial-gradient(circle at 90% 0%, var(--dot)) var(--ts),
-      radial-gradient(circle at 65% 0%, var(--dot)) var(--ts),
-      radial-gradient(circle at 40% 0%, var(--dot)) var(--ts),
-      radial-gradient(circle at 15% 0%, var(--dot)) var(--ts);
-    --cg1: conic-gradient(from -90deg at 5% 51%, var(--c0) 0 90deg, #fff0 0 100%)
-      var(--ts);
-    --cg2: conic-gradient(from -90deg at 25% 50%, var(--c1) 0 90deg, #fff0 0 100%)
-      var(--ts);
-    --cg3: conic-gradient(
-        from -90deg at 30% 38.5%,
-        var(--c0) 0 90deg,
-        #fff0 0 100%
-      )
-      var(--ts);
-    --cg4: conic-gradient(
-        from -90deg at 50% 37.5%,
-        var(--c1) 0 90deg,
-        #fff0 0 100%
-      )
-      var(--ts);
-    --cg5: conic-gradient(from -90deg at 55% 26%, var(--c0) 0 90deg, #fff0 0 100%)
-      var(--ts);
-    --cg6: conic-gradient(from -90deg at 75% 25%, var(--c1) 0 90deg, #fff0 0 100%)
-      var(--ts);
-    --cg7: conic-gradient(
-        from -90deg at 80% 13.5%,
-        var(--c0) 0 90deg,
-        #fff0 0 100%
-      )
-      var(--ts);
-    --cg8: conic-gradient(
-        from -90deg at 100% 12.5%,
-        var(--c1) 0 90deg,
-        #fff0 0 100%
-      )
-      var(--ts);
-  
-    background: var(--dot2), var(--dot2),
-      radial-gradient(circle at 90% 100%, var(--dot)) var(--ts),
-      radial-gradient(circle at 65% 100%, var(--dot)) var(--ts),
-      radial-gradient(circle at 40% 100%, var(--dot)) var(--ts),
-      radial-gradient(circle at 15% 100%, var(--dot)) var(--ts),
-      radial-gradient(circle at 90% 12.5%, var(--dot)) var(--ts),
-      radial-gradient(circle at 65% 25%, var(--dot)) var(--ts),
-      radial-gradient(circle at 40% 37.5%, var(--dot)) var(--ts),
-      radial-gradient(circle at 15% 50%, var(--dot)) var(--ts), var(--cg1),
-      var(--cg1), var(--cg2), var(--cg2), var(--cg3), var(--cg3), var(--cg4),
-      var(--cg4), var(--cg5), var(--cg5), var(--cg6), var(--cg6), var(--cg7),
-      var(--cg7), var(--cg8), var(--cg8),
-      linear-gradient(-45deg, #fff0 0 32.25%, #0002 50%, #000 77.5%) var(--ts),
-      linear-gradient(-45deg, #fff0 0 32.25%, #000 60%) var(--ts),
-      repeating-linear-gradient(90deg, var(--c0) 0 5%, var(--c1) 0 25%) var(--ts);
-  }
-  
+.fb-icon{
+  position: absolute;
+  color: #316FF6;
+  font-size: 40px;
+  margin-top: 3%;
+  margin-left: 5%;
+}
+.gog-icon{
+  position: absolute;
+  margin-top: 2%;
+  font-size: 40px;
+  z-index: 1;
+  margin-top: 3%;
+  margin-left: 5%;
 
-  .signin-container{
-    background-color: aquamarine;
-    width: 50%;
-    height: 100vh;
-    position: absolute;
-    z-index: 1;
-  }
- .box{
-    
-    margin-top: 190px;
- }
- .container h1{
-    position: absolute;
-    margin-top: 30px;
-    margin-left: 45%;
-    font-size: 60px;
-    color: #fff;
-    text-align: center;
- }
+}
+.right-side-box{
+  background-image: url('../Images/background.png');
+  width: 50%;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+}
+.logo-signup{
+  width: 398px;
+}
+.signup-input span{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 30%;
+}
+.group-image-signin{
+  width: 90%;
+    margin-top:-20%;
+    margin-left: 6%;
+}
+.left-side-box h1{
+  position: absolute;
+  margin-top: -150px;
+text-align: center;
+font-size: 25px;
+padding: 10px;
+margin-left: 2%;
+}
+.left-side-box p{
+  position: absolute;
+  margin-top: -120px;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  margin-left: 2%;
+}
+.signup-input input{
+  width: 300%;
+  margin-left: 40%;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+}
+.signup-input span{
+  position: absolute;
+  margin-left: 35%;
+}
+.signup-btn{
+  position: absolute;
+  margin-left: 5%;
+  background-color: white;
+  width: 40%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+  cursor: pointer;
+}
+.facebook-login{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90%;
+  margin-left: 40%;
+ 
+}
+
+.gog-box h3{
+  z-index: 1;
+  margin-top: 15px;
+  margin-left: 30%;
+}
+.fb-box{
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  height: 60px;
+  margin-left: 20%;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+  
+}
+.fb-box h3{
+  margin-top: 15px;
+  margin-left: 25%;
+}
+.gog-box{
+  position: absolute;
+  background-color: white;
+  width: 20%;
+  height: 60px;
+ display: flex;
+ margin-left: -1%;
+ margin-right: 20px;
+ border-radius: 10px;
+ box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+}
+.left-side-box h2{
+  position: absolute;
+  margin-top: 85px;
+  margin-left: 18%;
+}

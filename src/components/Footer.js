@@ -4,19 +4,18 @@ import menlogo from '../Images/menlogo.png'
 import { CiFacebook } from "react-icons/ci";
 import { LuYoutube } from "react-icons/lu";
 import { FaInstagram } from "react-icons/fa";
-import grndownwave from '../Images/grndownwave.png'
 const Footer = () => {
   return (
     <div className='hole-container'>
     <div className="down-wave-image">
-          <img src={grndownwave} width={'100%'} />
+          {/* <img src={grndownwave} width={'100%'} /> */}
         </div>
         <div className="footer">
         <footer>
         <div className="subscribe">
             <p>Mentoons is more than a service. <br></br>We are a guiding light to evolving personalities.<br></br> Help us help you transform your life today!</p>
             <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
-            <form class="form">
+            <form class="form-footer" >
   
     <label for="nome">Name:</label>
     
@@ -53,17 +52,20 @@ const Footer = () => {
             </div>
             <div className="opening-hours">
             <h1>OPENING HOURS:</h1>
+            <div className="title-heading">
+
             <th>
                 <tr>Monday to Friday</tr>
                 <tr>10 a.m. to 7 p.m.</tr>
             </th>
-            <th>
+            <th className='th'>
                 <tr>Weekends / Holidays</tr>
                 <tr>	available on
 appointment
 
 </tr>
             </th>
+            </div>
             </div>
         </footer>
         

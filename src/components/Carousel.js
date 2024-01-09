@@ -1,55 +1,83 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react'
 import '../css/caro.css'
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import caro1 from '../Images/caro1.jpg'
+import caro2 from '../Images/caro2.jpg'
+import caro3 from '../Images/caro3.jpg'
+import caro4 from '../Images/caro4.jpg'
+import bee from '../Images/bee.png'
 
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-const Carousel = ({ images }) => {
-
+const Carousel = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    
+  };
 
   return (
-    <>
-    <div className="caro">
-    <Swiper
-        spaceBetween={30}
-        effect={'fade'}
-        navigation={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[EffectFade, Navigation, Pagination]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://mentoons.com/img/service1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://mentoons.com/img/about3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://mentoons.com/img/about2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://mentoons.com/img/about1.jpg" />
-        </SwiperSlide>
-      </Swiper>
-      <div className="carotxt" data-aos="zoom-in-up">
-        <h1>Our Unique Solution</h1>
-        <p>We believe in transforming children's lives by changing maladaptive behavior, enhancing self-awareness, and <br></br>taking a stance against social media addiction.,<br></br>
+    <div>
+    <h2>Auto Play</h2>
+    <Slider {...settings}>
+      <div>
+        <div className="caro-container">
 
-Our evidence-based methodology combines concepts of social human development and learning through engaging,<br></br> fun elements like cartoons, games, books, and videos.<br></br>
+        <img src={caro1} alt="" />
+        <div className="main-para" data-aos="zoom-in">
+        <h3>WELCOME TO MENTOONS</h3>
+        <p>
+A unique platform that combines Mentoring with  <br></br> the powerful language of Cartoons.</p>
 
-Through our in-depth workshops, we provide resources that foster social interactions, healthy reactions, <br></br>and forming lasting friendships. We're here to support children, teenagers, and adults as they navigate life's challenges.</p>
+        </div>
+        </div>
       </div>
-    </div>
-   
-    </>
-  )
-   
-};
+      <div>
+      <div className="caro-container" data-aos="zoom-in">
+          
+      <img src={caro2} alt="" />
+      <div className="main-para">
+        <h3>6-12 WORKSHOPS</h3>
+        <p>
+        Brace your kids for interactive sessions, enriching journal writing, captivating books, thrilling games,<br></br> entertaining videos - all intended to keep your children engaged<br></br> while teaching them about thoughts, interactions, reactions, making friends, and enhancing self-awareness.</p>
 
-export default Carousel;
+        </div>
+          </div>
+      </div>
+      <div>
+      <div className="caro-container" data-aos="zoom-in">
+          
+      <img src={caro3} alt="" />
+      <div className="main-para">
+        <h3>WELCOME TO MENTOONS</h3>
+        <p>
+A unique platform that combines Mentoring with  <br></br>the powerful language of Cartoons.</p>
+
+        </div>
+          </div>
+      </div>
+      <div>
+      <div className="caro-container" data-aos="zoom-in">
+          
+      <img src={caro4} alt="" />
+      <div className="main-para">
+       
+        <h3>WELCOME TO MENTOONS</h3>
+        <p>
+A unique platform that combines Mentoring with <br></br>the powerful language of Cartoons.</p>
+
+        </div>
+          </div>
+      </div>
+     
+    </Slider>
+  </div>
+  )
+}
+
+export default Carousel

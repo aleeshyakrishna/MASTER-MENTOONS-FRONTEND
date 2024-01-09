@@ -1,5 +1,5 @@
 .joincointainer{
-    background-color: #73A73C;
+   
     height: 100vh;
     width: 100%;
 
@@ -9,27 +9,48 @@
     /* justify-content: space-around; */
     align-items: center;
 }
-.about-txt h1{
+.about-txt h3{
     text-align: center;
-    font-size:90px;
-    color: transparent;
-    -webkit-text-stroke: 1px #fff;
+    font-size:70px;
+    color: black;
     margin-top: 20px;
+    padding: 20px;
 }
 .about-txt p{
     text-align: center;
-    line-height: 3rem;
     font-family: 'Caveat', cursive;
-    font-size: 30px;
-    color: #FEEEAB;
+    color: black;
     
 }
-.grass img{
-    width: 300px;
-    
-    gap: 50px;
+.per-icons{
+    position: absolute;
+    font-size: 40px;
+    margin-top: -18px;
+    margin-left: 47%;
+    color: #EC9600;
+}
+.per-iconsa{
+    position: absolute;
+    font-size: 40px;
+    margin-top: -18px;
+    margin-left: 49%;
+    color: #EC9600;
+}
+.join-heading h1{
+    background-color: #D12881;
+    margin-left: 30%;
+    text-align: center;
+    font-size:45px;
+    color: white;
+    font-weight: 1000;
+    margin-top: 20px;
+    width: 40%;
+    text-align: center;
+    border-radius:100%;
+    padding: 30px;
    
 }
+
 .grass{
     display: flex;
     justify-content: space-around;
@@ -37,7 +58,7 @@
 }
 .grass p{
     position: absolute;
-    font-size: 60px;
+    font-size: 40px;
     color:#FEEEAB;
     top:80px;
    
@@ -53,24 +74,47 @@
     position: absolute;
     top: 820px;
 }
-.down img{
-    position: absolute;
-    width: 100%;
-    bottom: -169%;
-    z-index: 2;
-}
+
 @media screen and (max-width:600px){
     .joincointainer{
-        background-color: #73A73C;
-        height: 140vh;
-        width: 100%;
-    
     }
-    .down img{
+    .join-txt h3{
+        font-size: 40px;
+    }
+    .join-txt p{
+        color: #D12881;
+        font-size: 16px;
+    }
+    .join-heading h1{
+        background-color: #D12881;
+        margin-left: 17%;
+        text-align: center;
+        font-size:25px;
+        color: white;
+        font-weight: 1000;
+        margin-top:30px;
+        width: 70%;
+        text-align: center;
+        border-radius:100%;
+        padding: 10px;
         position: absolute;
-        width: 100%;
-        bottom: -162%;
-        z-index: 2;
+       
+    }
+    .per-icons{
+        position: absolute;
+        font-size: 40px;
+        margin-top: 0px;
+        margin-left: 45%;
+        color: #EC9600;
+        z-index: 1;
+    }
+    .per-iconsa{
+        position: absolute;
+        font-size: 40px;
+        margin-top: 0px;
+        margin-left: 49%;
+        color: #EC9600;
+        z-index: 1;
     }
     .about-txt h1{
         text-align: center;
@@ -83,11 +127,16 @@
         text-align: center;
         line-height: 2rem;
         font-family: 'Caveat', cursive;
-        font-size: 20px;
+       
     }
     .about-txt{
         display: block;
         /* justify-content: space-around; */
         align-items: center;
     }
+}
+
+
+@media screen and (max-width:600px){
+    
 }

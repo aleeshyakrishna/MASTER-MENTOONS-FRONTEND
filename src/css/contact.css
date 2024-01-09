@@ -1,22 +1,54 @@
 .contact-main{
-    background-color: #73A73C;
-    height: 115vh;
+    background-color: #FDFBE8;
+    height: 110vh;
     width: 100%;
+    
+
+}
+.contact-btn{
+    position: absolute;
+    background-color: #d12881;
+    margin-top: -60px;
+    margin-left: 55%;
+    padding: 10px;
+    color: white;
+    border-radius: 355px 45px 225px 75px/15px 225px 15px 255px ;
+}
+.contact-main-conatiner{
+    margin-top: 10%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 140px;
     position: relative;
+}
+.contact-box input{
+    margin-left: -159%;
+    width: 270%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+    border: 2px solid gainsboro ;
 
 }
-
+.contact-box h1{
+    position: absolute;
+    margin-top: -90px;
+    margin-left: -320px;
+     color: black;
+     font-size: 50px;
+}
+.contact-box input:nth-child(7){
+    
+    padding: 40px;
+}
 .information p{
     font-size: 22px;
-  color: aliceblue;
+    color: black;
     margin: 10px;
 }
 .information h1{
-    color: blanchedalmond;
+    color:black;
     font-size: 50px;
 }
 .write-us{
@@ -31,20 +63,37 @@
 
 @media screen and (max-width:600px){
     .contact-main{
-        background-color: #73A73C;
+        background-color: #FDFBE8;
         height: 175vh;
         width: 100%;
-        display: block;
         margin-top: 20px
     }
     .information {
         position: absolute;
-        margin-top: 150px;
-        margin-left: 120px;
+        top: 650px;
+    
     }
-    .write-us{
+    .contact-box{
         position: absolute;
-        margin-top: 500px;
-        margin-left: 120px;
+        top: 300px;
+        left: 69%;
+    }
+    .contact-btn{
+        background-color: #d12881;
+        margin-top: 560px;
+        margin-left: 25%;
+        padding: 10px;
+        color: white;
+        border-radius: 355px 45px 225px 75px/15px 225px 15px 255px ;
+    }
+    .contact-box input{
+        margin-left: -159%;
+        width: 170%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: 6px 6px 0px rgba(103, 102, 102, 0.2);
+        border: 2px solid gainsboro ;
+    
     }
 }

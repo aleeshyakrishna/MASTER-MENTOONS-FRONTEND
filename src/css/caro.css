@@ -1,84 +1,63 @@
-
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-.swiper {
-  width: 30%;
-  height: 60%;
-  position: absolute;
-  top: -100px;
-  left: 60px;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  
-
-  /* Center slide text vertically */
-  
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 10%;
-  object-fit: cover;
-  border-radius: 100%;
-}
-.caro{
-  display: flex;
-
-  
-  
-}
-.carotxt{
-  margin-right: 1%;
-  
-}
-.carotxt h1{
-  font-size: 90px;
-  color: transparent;
-    -webkit-text-stroke: 1px #fff;
-  padding: 10px;
-}
-.carotxt p{
-  font-size: 22px;
-  color: #eee;
-  font-family: 'Caveat', cursive;
-}
-@media screen and (max-width:600px){
-  .swiper-slide img {
-    
+.caro-container img{
+    margin-top: 4%;
     width: 100%;
-    height: 50%;
-   
-  }
-  .carotxt h1{
+    height: 650px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+.main-para{
+    position: absolute;
+    background-color: aliceblue;
+    border: 7px solid yellow;
+    width: 540px;
+    height: 200px;
+    margin-top: -330px;
+    margin-left: 30px;
+    border-radius: 81% 19% 81% 19% / 3% 100% 0% 97% ;
+}
+.main-para h3{
+    margin: 20px;
     font-size: 30px;
-    color: transparent;
-      -webkit-text-stroke: 1px #fff;
-    padding: 10px;
-  }
-  .swiper {
-    width: 50%;
-    height: 50%;
-    top: -50px;
-
-  }
-  .caro{
-    display: block;
-  }
+    text-align: center;
+}
+.main-para p{
+    font-size: 16px;
+    margin: 20px;
+    text-align: center;
+}
+.bee{
+    width: 50px;
+}
+@media screen and (max-width:600px) {
+    .caro-container{
+        margin-top: 80px;
+    }
+    .caro-container img{
+        margin-top: 4%;
+        width: 110%;
+        height: 100%;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+    }
+    .main-para{
+        position: absolute;
+        background-color: aliceblue;
+        opacity: 0.9;
+        border: 7px solid yellow;
+        width: 330px;
+        height: 150px;
+        margin-top: -200px;
+        margin-left: 30px;
+        border-radius: 81% 19% 81% 19% / 3% 100% 0% 97% ;
+    }
+    .main-para h3{
+        margin: 20px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .main-para p{
+        font-size: 14px;
+        margin: 20px;
+        text-align: center;
+    }
 }

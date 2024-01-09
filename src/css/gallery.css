@@ -1,14 +1,25 @@
 .image-gallery {
-  margin-top: 80%;
   width: 100%;
   height: 180vh;
-  background-color: #EAAC8B;
+  background-color: #FDFBE8;
   position: relative;
   z-index: -3;
   }
   .image-gallery h1{
     position: absolute;
     margin-top: 10%;
+  }
+  .join-heading-gallry h1{
+    background-color: #D12881;
+    margin-left: 30%;
+    font-size: 45px;
+    color: white;
+    font-weight: 1000;
+    margin-top: 20px;
+    width: 40%;
+    text-align: center;
+    border-radius: 100%;
+    padding: 30px;
   }
 
 .gallery-pic{
