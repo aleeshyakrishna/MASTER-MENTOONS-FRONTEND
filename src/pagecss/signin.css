@@ -13,6 +13,14 @@
   margin-top: 3%;
   margin-left: 5%;
 }
+.passc-icons{
+  position: absolute;
+    color: black;
+    margin-left:  42%;
+    margin-top: -74px;
+    font-size: 30px;
+    z-index: 1;
+}
 .gog-icon{
   position: absolute;
   margin-top: 2%;

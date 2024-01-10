@@ -8,8 +8,14 @@ import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
+import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
-import { } from '@hookform/resolvers/yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+
+
+      
+
+
 const Signin = () => {
   const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false);
@@ -36,7 +42,7 @@ const Signin = () => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <button onClick={togglePasswordVisibility}>
-        {showPassword ? <FaRegEyeSlash  className='pass-icons'/> : <FaRegEye className='pass-icons' />}
+        {showPassword ? <FaRegEyeSlash  className='passc-icons'/> : <FaRegEye className='passc-icons' />}
       </button><br></br>
           <span>Forgot Password?</span>
             </div>

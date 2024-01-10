@@ -111,12 +111,12 @@ const data = [
     position : `Sketch Artist`
     },
     {
-    name : `Dilsha`,
+    name : `Aleesha`,
     img : require("../Images/alisha.jpg"),
     position : `Backend Developer`
     },
     {
-      name : `Aleesha`,
+      name : `Dilsha`,
       img : require("../Images/dilsha.jpg"),
       position : `Backend Developer`
       },
