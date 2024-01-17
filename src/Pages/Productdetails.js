@@ -8,58 +8,56 @@ import '../pagecss/Productdetail.css'
 import { MdCurrencyRupee } from "react-icons/md";
 import Productnav from '../Pages/Productnav.js'
 import axios from '../api/Baseurl.js'
+import { object } from 'yup'
+
 
 const Productdetails = () => {
+  
 
-  const dispatch = useDispatch();
-  const addProduct =(product) =>{
-    dispatch(addCart(product));
-  }
+  // const dispatch = useDispatch();
+  // const addProduct =(product) =>{
+  //   dispatch(addCart(product));
+  // }
 
-  const {id} = useParams();
-
+  
   const [product,setProduct] = useState([]);
-
+  
   const [loding,setLoading] = useState(false);
 
-
+  const {id} = useParams();
   useEffect(()=>{
-    const fetchProduct= async () =>{
-     
+    const fetchProduct= async ({id}) =>{
+
        try {
-          const response = await axios.get('/products')
-          console.log(response,"++++++++++");
-          setProduct(response.data)
+          const response = await axios.get(`/products/:${id}`)
+          console.log(response,"....----.......>");
+          setProduct(response.data.prod)
+          console.log(response);
        } catch (err){
          return { status: false , message:"not found product"}
        }
     }
     fetchProduct()
   },[])
-
-  const Loading = () =>{
-    return(
-        <Lottie className='lod' animationData={Productani} />
-    )
-  }
-
+  !Object.keys(product).length > 0 && <div>ppp</div>
   const ShowProduct = () =>{
     return(
       <>
     
-      <div className="product-main-box">
-      <div className='detile-image'>
+ <div className="product-main-box" >
+      <div className='detile-image'key={{id}}>
           <img src={product.image} alt="" />
       </div>
       <div className="product-detile">
-      <h2>{product.title}</h2>
+      <h2>{product?.productCategory}</h2>
+      <br></br>
       <p className='pd'><MdCurrencyRupee className='rs-icon'/>{product.price}</p>
-      <p>{product.description
-}</p>
+      <p>{product.productDescription}</p>
  <button>Shop Now</button>
- <NavLink to='/Cart'><button onClick={()=>addProduct(product)}>Add To Cart</button></NavLink>
+ <NavLink to='/Cart'><button >Add To Cart</button></NavLink>
       </div>  
       </div>
+
       
       </>
     )
@@ -69,7 +67,7 @@ const Productdetails = () => {
     <div>
         <Productnav />
       <div>
-       {loding ? <Loading/> : <ShowProduct />}
+     <ShowProduct />
       </div>
     </div>
   )

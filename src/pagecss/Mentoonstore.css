@@ -1,17 +1,24 @@
-
-    .categorys-box{
-        position: absolute;
-        margin-top: 10%;
-        margin-left: 30%;
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-    .categorys-box button{
-        border: 1px solid #FFDA00;
-        padding: 10px;
-        border-radius: 10px;
-    }
+.btns {
+    position: absolute;
+    display: flex;
+    gap: 5rem;
+    margin-top: 8%;
+    margin-left: 35%;
+  }
+  
+  .categorys-box {
+    display: flex;
+    gap: 5rem;
+    align-items: center; /* Align items vertically in the middle */
+  }
+  
+  .categorys-box button {
+    border: 1px solid #FFDA00;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  
     .loading{
         display: flex;
         align-items: center;

@@ -7,30 +7,47 @@ import axios from '../api/Baseurl.js'
 
 const Mentoonstore = (props) => {
 
+  
+  const [items,setItems] = useState([]);
+  const [category,setCategory] = useState([])
+  const [loading,setLoading] = useState(false);
+  const [filter,setFilter] = useState()
+  let componentMounted = true;
 
-const [items,setItems] = useState([]);
-const [loading,setLoading] = useState(false);
-let componentMounted = true;
-
-const navigate = useNavigate();
+ 
 
 
-useEffect(()=>{
-  const fetchProduct= async () =>{
-   
-     try {
+
+  
+  const navigate = useNavigate();
+  
+  
+  useEffect(()=>{
+    const fetchProduct= async () =>{
+      
+      try {
         const response = await axios.get('/products')
+        var categories = await axios.get('/getCategory')
+        // console.log(categories,"categriesss.........");
         console.log(response,"++++++++++");
         setItems(response.data.prod)
-     } catch (err){
-       return { status: false , message:"not found product"}
-     }
-  }
-  fetchProduct()
-},[])
+        // console.log(items);
+        setCategory(categories.data.cate)
+        
+      } catch (err){
+        return { status: false , message:"not found product"}
+      }
+    }
+    fetchProduct()
+  },[])
+  
 
-
-
+    var getCate = async (e,key)=>{
+      e.preventDefault()
+      const response = await axios.get(`/getCatProduct/:${key}`)
+      console.log(response,"filtering..........");
+    }
+ 
   const Loading = () =>{
     return (
       <>
@@ -43,35 +60,38 @@ useEffect(()=>{
     //     const updateitems =items.filter((x)=>x.category === cat) ;
     //     setFliter(updateitems)
     //  }
-  const ShowPro = () =>{
-    return(
-      <div className="categorys-box">
-      <button >All</button>
-      <button >E-Comics</button>
-      <button >Audio-Comics</button>
-      <button >WorkShops</button>
-      <button >Podcast</button>
-      <hr></hr>
-     </div>
-    
- 
-    )
-  }
+  
   return (
     <div>
       <Productnav />
         <div className="main-mentoons" >
         
         </div>
-      <div className="setlading">
+      {/* <div className="setlading">
         {loading ? <Loading /> : <ShowPro />}
+      </div> */}
+      
+      <div className="btns">
+  {category.map((item) => (
+    <div className="categorys-box">
+      <div className="btn-box"  key={item._id}>
+        <button onClick={(e)=>getCate(e,item._id)}>{item.CategoryName}</button>
       </div>
+    </div>
+  ))}
+</div>
 
+       
+      {/* <button onClick={()=>{}}>E-Comics</button>
+      <button onClick={()=>{}}>Audio-Comics</button>
+      <button onClick={()=>{}}>WorkShops</button>
+      <button onClick={()=>{}}>Podcast</button> */}
+    {items.length > 0 ?
        <div className="show-product">
        {items.map((item)=>{
-            return<div className='product-main' onClick={()=>navigate(`/Productdetails/${item.id}`)}>
+            return<div className='product-main' onClick={()=>navigate(`/Productdetails/${item._id}`)}>
               <div className="dispay-flex">
-              <div className='product-box' key={item.id}>
+              <div className='product-box' key={item._id}>
               <img src={item.image} alt="" />
               <h2>{item.productName}</h2>
               <p><MdCurrencyRupee />{item.price}</p>
@@ -79,7 +99,7 @@ useEffect(()=>{
                     Go To Cart
                   </button>:
                   <button to= {`/Productdetails/${item.id}`} className="addtocart-btn">
-                  Add To Cart
+                  view product
                 </button>
                 
                 }
@@ -89,6 +109,7 @@ useEffect(()=>{
             
           })}
        </div>
+       :<h2>Loading</h2>} 
          
     </div>
   )
