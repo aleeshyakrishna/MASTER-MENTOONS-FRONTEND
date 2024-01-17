@@ -10,7 +10,7 @@
     z-index: 3;
     margin-left: 90%;
     padding: 10px;
-    position: absolute;
+    position: fixed;
    
 }
 .up-btn-icon{

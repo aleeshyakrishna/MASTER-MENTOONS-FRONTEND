@@ -11,7 +11,7 @@
    
 }
 @media screen and (max-width:600px){
-    .main{
+    /* .main{
         
         background-color: #FDFBE8;
         width: 90%;
@@ -19,11 +19,16 @@
         margin-top:100%;
         margin-left: -0%;
         margin-top: 150px;
-    }
+    } */
     .skywave{
         width: 100%;
        position: absolute;
        margin-top: -45px;
        z-index: -3;
+    }
+    .main-caro{
+        background-color: #FDFBE8;
+        margin-top: 320%;
+        margin-bottom: 80px;
     }
 }

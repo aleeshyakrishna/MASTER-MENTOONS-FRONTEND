@@ -6,10 +6,8 @@ import { CiMenuFries } from "react-icons/ci";
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import { useNavigate } from 'react-router-dom'
 import Logbtn from './Logbtn';
-
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
-
-   const navigate = useNavigate()
 
      const [open,setopen]= useState(false);
 
@@ -57,7 +55,7 @@ const Navbar = () => {
            duration={1200}>
             Team
            </Link> </li>  
-        <li onClick={closeMenu}><Link 
+        {/* <li onClick={closeMenu}><Link 
            to="gallery"
            spy={true}
            smooth={true}
@@ -65,7 +63,7 @@ const Navbar = () => {
            offset={50}
            duration={1200}>
             Gallery
-           </Link> </li> 
+           </Link> </li>  */}
            <img src={menlogo}  className='logo'/>
         <li onClick={closeMenu}><Link 
            to="join"
@@ -85,19 +83,30 @@ const Navbar = () => {
            offset={-500}
            duration={1200}>
            Contact </Link> </li> 
-           <li onClick={closeMenu}><Link 
-           to="hero"
+           <NavLink to='/Shopping'>
+            <li onClick={closeMenu}><Link 
+           
            spy={true}
            smooth={true}
            hashSpy={true}
            offset={50}
            duration={1200}>
-            Career
+            Mentoons Store
            </Link> </li> 
        
-       <Logbtn />
-        
-            
+            </NavLink>  
+            <NavLink to='Signup'>
+            <li onClick={closeMenu}><Link 
+           to="join"
+           spy={true}
+           smooth={true}
+           hashSpy={true}
+           offset={50}
+           duration={1200}>
+        Signup
+           </Link> </li> 
+               </NavLink> 
+           
           </ul>
         
           <div onClick={handleClick} className="icons">
@@ -108,6 +117,7 @@ const Navbar = () => {
           
 
           </div>
+          
         </nav>
     </div>
   )

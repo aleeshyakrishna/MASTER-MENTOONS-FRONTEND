@@ -15,20 +15,10 @@ const Footer = () => {
         <div className="subscribe">
             <p>Mentoons is more than a service. <br></br>We are a guiding light to evolving personalities.<br></br> Help us help you transform your life today!</p>
             <h1>SUBSCRIBE TO OUR NEWSLETTER</h1>
-            <form class="form-footer" >
-  
-    <label for="nome">Name:</label>
-    
-      <input type="text" class="infos" id="nome" name="nome" />
-    <div class="mario"></div>
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" name="email" />
-
-      <button type="submit">Subscribe</button>
-      <button type="reset" id="limpar">Clear</button>
-
-
-</form>
+            <div class="input-group">
+    <input type="email" className="input-footer" id="Email" name="Email" placeholder="Email Address" autocomplete="off" />
+    <input className="button--submit" value="Subscribe" type="submit" />
+</div>
         </div>
             <div className="footer-logo">
             <img src={menlogo}  width={'150px'}/>

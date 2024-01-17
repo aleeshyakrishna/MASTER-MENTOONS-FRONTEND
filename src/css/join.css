@@ -76,6 +76,11 @@
 }
 
 @media screen and (max-width:600px){
+    .birdiv{
+        position: absolute;
+        top: 520px;
+        width: 150%;
+    }
     .joincointainer{
     }
     .join-txt h3{
@@ -139,4 +144,44 @@
 
 @media screen and (max-width:600px){
     
+}
+@media (min-width:768px) and (max-width:1024px){
+    .join-heading h1{
+        background-color: #D12881;
+        margin-left:30%;
+        text-align: center;
+        font-size:25px;
+        color: white;
+        font-weight: 1000;
+        margin-top:30px;
+        width: 40%;
+        text-align: center;
+        border-radius:100%;
+        padding: 10px;
+        position: absolute;
+       
+    }
+    .per-icons{
+        position: absolute;
+        font-size: 40px;
+        margin-top: 0px;
+        margin-left: 45%;
+        color: #EC9600;
+        z-index: 1;
+    }
+    .per-iconsa{
+        position: absolute;
+        font-size: 40px;
+        margin-top: 0px;
+        margin-left: 47%;
+        color: #EC9600;
+        z-index: 1;
+    }
+    .about-txt h3{
+        text-align: center;
+        font-size:40px;
+        color: black;
+        margin-top: 90px;
+        padding: 20px;
+    }
 }

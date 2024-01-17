@@ -25,7 +25,7 @@ const Join = () => {
   </div>
   <div className="birdiv">
 
-    <Lottie animationData={Bird}  data-aos-duration="1000" data-aos="fade-right" className='bird'/>
+    {/* <Lottie animationData={Bird}  data-aos-duration="1000" data-aos="fade-right" className='bird'/> */}
   </div>
   <div className="about-txt">
     <div>

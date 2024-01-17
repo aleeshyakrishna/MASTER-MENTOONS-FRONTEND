@@ -14,15 +14,15 @@ nav img{
     transform: translateX(10);
     margin: 20px;
 }
-nav .logo{
+/* nav .logo{
     background-color: #EC9600;
     margin-top: 40px;
     width: 170px;
     height: 120px;
     border-radius: 0px 0px 30px 30px ;
     border-bottom: 1px solid  #D12881 ;
-}
-nav{
+} */
+/* nav{
     display: flex;
     justify-content: center;
     background-color: #EC9600;
@@ -33,13 +33,12 @@ nav{
     border-bottom: 1px solid  #D12881 ;
     
     
-}
+} */
 nav .nav-links{
-    display: flex;
-    align-items: center;
-    list-style: none;
+
 }
-nav .nav-links li{
+.nav-linkss li{
+    margin-top: 15px;
     padding: 10px;
     font-size: 20px;
     font-weight: 500;
@@ -50,13 +49,20 @@ font-family: 'Poppins', sans-serif;
     margin-right: 20px;
     cursor: pointer;
 }
-nav .nav-links li:hover{
+nav .nav-linkss li:hover{
     background-color :#D12881;
     color: #fff;
     border-radius: 30px;
     display: flex;
     align-items: center;
    
+}
+.nav-linkss{
+    display: flex;
+}
+.nav-linkss li{
+  
+    color: white;
 }
 /* nav .nav-links li:active{
     background-color: #D12881;
@@ -78,8 +84,8 @@ nav .nav-links li:hover{
 }
 @media screen and (max-width:600px) {
     nav .logo{
-        background-color: #D12881;
-        width: 120px;
+        background-color: white;
+        width: 100px;
         height: 100px;
         border-radius: 0px 0px 30px 30px ;
         
@@ -88,7 +94,7 @@ nav .nav-links li:hover{
         display: flex;
         justify-content: end;
         align-items: center;
-        color:#D12881;
+        color:white;
         font-weight: 500;
         font-size: 30px;
        
@@ -99,7 +105,8 @@ nav .nav-links li:hover{
         display: inline;
         width: 200px;
         margin-top: -34px;
-        margin-left: 50%;
+        margin-left: 37%;
+        
     }
     nav .nav-links{
         position: absolute;
@@ -109,7 +116,7 @@ nav .nav-links li:hover{
         display: flex;
         list-style: none;
         flex-direction: column;
-        background-color:#EC9600;
+        background-color:#00AEEF;
     }
     nav .nav-links.active{
         position: absolute;
@@ -126,13 +133,17 @@ nav .nav-links li:hover{
         display: flex;
         justify-content: space-between;
         float: right;
-        background-color: #EC9600;
+        background-color: #00AEEF;
         height: 80px;
         position: fixed;
         z-index: 3;
         width: 100%;
         border-bottom: 1px solid  #D12881 ;
        
+    }
+    .nav-linkss li{
+        display: flex;
+        margin-right: 0%;
     }
     .logo{
         display: none;

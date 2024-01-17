@@ -26,13 +26,13 @@ const Signin = () => {
     };
   return (
    <div>
-        <div className="signup-main-container-new">
+        <div className="signin-main-container-new">
         <form>
         <div className="left-side-box">
           <h1>Welcome Back</h1>
           <p className='signin-p'>Sign in to continue</p>
          
-            <div className="signup-input">
+            <div className="signin-input-new">
             <input type='text' placeholder='Email ID' /><br></br>
           <input className='pass'
         type={showPassword ? 'text' : 'password'}
@@ -44,10 +44,10 @@ const Signin = () => {
       <button onClick={togglePasswordVisibility}>
         {showPassword ? <FaRegEyeSlash  className='passc-icons'/> : <FaRegEye className='passc-icons' />}
       </button><br></br>
-          <span>Forgot Password?</span>
+          <span className='forget-login'>Forgot Password?</span>
             </div>
           
-         <input type='submit' className='signup-btn' placeholder='Login' />
+         <input type='submit' className='signin-btn' placeholder='Login' />
             <h2>Not a Member? <Link to='/Signup'><a href=''>Click here</a> </Link></h2>
 
 
@@ -65,8 +65,9 @@ const Signin = () => {
               </div>
   
             </div>
+            
               </div>
-
+            
             </form>
         
 
@@ -76,12 +77,15 @@ const Signin = () => {
 
 
 
-            <div className="right-side-box">
-              <img src={menlogo} className='logo-signup' alt="" />
+            <div className="right-side-box-new">
+              <img src={menlogo} className='logo-signin' alt="" />
               <img src={group} className='group-image-signin' alt="" />
             </div>
+            
           </div>
          
+
+          
         </div>
 
   

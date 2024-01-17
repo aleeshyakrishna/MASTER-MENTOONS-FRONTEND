@@ -82,7 +82,11 @@ const data = [
     {
         name : `Anam Fathima`,
     img : `https://mentoons.com/img/team-02.jpg`,
-    position : `Content Writer`
+    position : `Content Writer`,
+    name1:"dschj",
+    name1:"dschj",
+    name1:"dschj",
+    name1:"dschj",
     },
     {
         name : `Joice Lincy`,

@@ -1,0 +1,98 @@
+
+    .categorys-box{
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 30%;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .categorys-box button{
+        border: 1px solid #FFDA00;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .loading{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 18%;
+        margin-left: 45%;
+        font-size: 20px;
+        position: absolute;
+    }
+    .categorys-box button:hover{
+        border: 1px solid white;
+        background-color: #FFDA00;
+        color: white;
+        padding: 10px;
+        border-radius: 10%;
+    }
+    .product-main{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        cursor: pointer;
+    
+    }
+    .product-box {
+        border: #ff7300 3px solid ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 400px;
+        padding: 40px;
+        border-radius: 10%;
+        margin-top: 220px;
+        flex-wrap: wrap;
+    }
+    .product-box img{
+        position: absolute;
+        width: 120px;
+        display: flex;
+       /* margin-left: 10%; */
+       margin-top: -13%;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+    .product-box h2{
+       
+        font-size: 14px;
+        margin-top: 75%;
+    }
+    .product-box p{
+        flex-wrap: wrap;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    .addtocart-btn{
+        margin-top: 20px;
+        background-color: yellow;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 10%;
+        cursor: pointer;
+    }
+    .addtocart-btn:hover{
+        background-color:#fff ;
+        border: 1px solid yellow;
+        font-size: 16px;
+        border-radius: 10%;
+        transform: 0.1s ;
+    }
+    .show-product{
+        display: flex;
+        margin-top: 20px;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center ;
+    }
+   

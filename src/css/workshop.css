@@ -59,8 +59,13 @@ font-family: 'Archivo Black', sans-serif;
 /* empoer css */
 
 @media screen and (max-width:600px) {
+    .container-workshpo h1 {
+        font-size: 40px;
+    }
     .workshop{
-        margin-top: 65%;
+        position: absolute;
+        margin-top: 55%;
+        height: 100vh;
     }
     .main-Workshop-conatiner{
         margin-top: 65%;
@@ -70,23 +75,25 @@ font-family: 'Archivo Black', sans-serif;
        
     }
     .workshop-box{
-        /* background-color: #FDFBE8;
-        margin-top:10%;
-        margin-left: 10%;
-        width: 40%;
+        background-color: #FDFBE8;
+        margin-top: 70px;
+        margin-left: 50%;
+        width: 0px;
         height: 70%;
-        border-radius: 20px; */
+        border-radius: 20px;
         
     }
     
     .workshop-side-btns button{
-        position: absolute;
+       
         background-color: #34327C;
         padding: 20px;
         color: aliceblue;
         border-radius: 10px 10px 0px 0px ;
-        margin-top: -76px;
-        margin-left: 20px;
+        margin-top:89px;
+        margin-left: -105px;
+        margin-right: 90px;
+        display: block  ;
         
     }
     .workshop-side-btns button:hover{
@@ -95,10 +102,21 @@ font-family: 'Archivo Black', sans-serif;
     .Workshop-image img{
         margin-top: 100px;
         margin-left: -120px;
-        border-radius: 50%;
+        border-radius: 80%;
         width: 200px;
         position: absolute;
+        display: none;
     }
+    .full-box-work{
+        background-color: #FDFBE8;
+        height: 100px;
+    }
+    /* .Workshop-image img{
+        background-image: url('../Images/kidsbg.png');
+        border-radius: 5%;
+        width: 400px;
+    
+    } */
 }
 
 

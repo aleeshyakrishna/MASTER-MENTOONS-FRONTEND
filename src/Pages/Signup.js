@@ -50,7 +50,7 @@ const Signup = () => {
         
           <form onSubmit={handleSubmit((data)=>{console.log(data);})}>
           <div className="left-side-box-signup">
-          <img src={menlogo} alt="" />
+          <img src={menlogo}  className='sign-up-logo' alt="" />
           <span className='signin-p'>Join Mentoons to get Started</span>
             <div className="signup-input-new">
           <input  {...register('userName')}   type='text' placeholder='User name' /><br></br>

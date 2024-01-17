@@ -16,6 +16,7 @@ import Gototop from '../components/Gototop.js'
 
 const Home = () => {
   return (
+    
     <div>
     
    <Navbar />
@@ -25,9 +26,10 @@ const Home = () => {
    <Workshop />
    <Team />
    <Namecarousel/>
-   <Gallery />
+ 
    <Gototop />
-   <Joinourteam />
+   {/* <Joinourteam /> */}
+     <Gallery />
    <Crochild />
    <Contact />
    <Footer /> 

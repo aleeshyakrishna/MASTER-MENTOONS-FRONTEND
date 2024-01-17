@@ -10,7 +10,7 @@ const Workshop = () => {
   const data = [
     {
       id: 1,
-      heading: "हASYARAS",
+      heading: "WorkShops",
       linea:
         "Break free from the grip of social media through our holistic laughter workshops. We use the therapeutic power of laughter to relieve stress and mitigate the overwhelming need to constantly check social network channels  ",
       lineb:
@@ -23,7 +23,7 @@ const Workshop = () => {
     },
     {
       id: 2,
-      heading: "INSTANTकTHA",
+      heading: "Comics",
       linea:
         "Our workshops offer a multitude of benefits. These unique, interactive and effective sessions will help you:",
       lineb:
@@ -42,7 +42,7 @@ const Workshop = () => {
     },
     {
       id: 3,
-      heading: "KALAकृTI",
+      heading: "Audio Comics",
       linea:
         "Art Workshops for Reducing Negative Moods: Experience the therapeutic tranquility with our Art Workshops. Kalakriti's sessions provide a safe, conducive space for expression, transforming your negative energy into a beautiful canvas of positivity and calmness. Unleash your creativity and find joy.",
       lineb: "Social Media De-Addiction: Our Social Media De-Addiction program is designed with a holistic approach to help you regain control over your online habits. Kalakriti ensures a balanced and healthier relationship with social media, empowering you to live a more productive life.",
@@ -55,7 +55,6 @@ const Workshop = () => {
     },
   ];
 
-  console.log(data);
   const [toggel, setToggle] = useState();
 
   return (
@@ -79,8 +78,8 @@ const Workshop = () => {
       
     <div className="work-image">
     <div className="main-empower-container">
-      
-        <div className="empower-box">
+      <div className="full-box-work">
+      <div className="workshop-con-box">
           {data.map(({teenageb,teenagea,teenaboveb,teenabovea,agechildb,agechilda,agea,ageb,agec, heading, linea, lineb, linec,lined, img, id }) => {
             return (
               <div>
@@ -149,6 +148,8 @@ const Workshop = () => {
             );
           })}
         </div>
+      </div>
+   
        
       </div>
     </div>
