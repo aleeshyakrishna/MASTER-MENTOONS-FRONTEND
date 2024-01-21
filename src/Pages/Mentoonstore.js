@@ -92,7 +92,7 @@ const Mentoonstore = (props) => {
             return<div className='product-main' onClick={()=>navigate(`/Productdetails/${item._id}`)}>
               <div className="dispay-flex">
               <div className='product-box' key={item._id}>
-              <img src={item.image} alt="" />
+              <img src={item.thumbnail} alt="" />
               <h2>{item.productName}</h2>
               <p><MdCurrencyRupee />{item.price}</p>
               {item?.count > 0 ?   <button className="addtocart-btn">

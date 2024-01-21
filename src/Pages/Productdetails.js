@@ -25,19 +25,20 @@ const Productdetails = () => {
   const [loding,setLoading] = useState(false);
 
   const {id} = useParams();
+  console.log(id,"999999999999999999999999999999");
   useEffect(()=>{
-    const fetchProduct= async ({id}) =>{
+    const fetchProduct= async (id) =>{
 
        try {
-          const response = await axios.get(`/products/:${id}`)
+          const response = await axios.get(`/prodView/${id}`)
           console.log(response,"....----.......>");
-          setProduct(response.data.prod)
+          setProduct(response.data.data.result)
           console.log(response);
        } catch (err){
          return { status: false , message:"not found product"}
        }
     }
-    fetchProduct()
+    fetchProduct(id)
   },[])
   !Object.keys(product).length > 0 && <div>ppp</div>
   const ShowProduct = () =>{
@@ -46,14 +47,14 @@ const Productdetails = () => {
     
  <div className="product-main-box" >
       <div className='detile-image'key={{id}}>
-          <img src={product.image} alt="" />
+          <img src={product.thumbnail} alt="" />
       </div>
       <div className="product-detile">
-      <h2>{product?.productCategory}</h2>
+      <h2>{product?.productName}</h2>
       <br></br>
       <p className='pd'><MdCurrencyRupee className='rs-icon'/>{product.price}</p>
       <p>{product.productDescription}</p>
- <button>Shop Now</button>
+ <button>BUY</button>
  <NavLink to='/Cart'><button >Add To Cart</button></NavLink>
       </div>  
       </div>

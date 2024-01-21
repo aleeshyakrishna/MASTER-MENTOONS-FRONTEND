@@ -1,54 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import "../pagecss/Productitems.css";
 import { useFormik } from "formik";
-const Productitems = ({onClose}) => {
-  // const [video,setVideo] =useState("");
-  const [image,setImage] = useState("")
-  const handleChange = (event) =>{
-    console.log(event,"this is form eventsssssssssssss");
-    let files = event.target.files[0];
-    setImage(files)
-    console.log(files,"files coming............");
-    
-   
-  }
+import axios from '../api/Baseurl.js';
 
-
+const Productitems = () => {
   const formik = useFormik({
     initialValues: {
       productName: "",
+      productDescription: "",
       productCategory: "",
       ageCategory: "",
       price: "",
       free: "",
-      image: "",
-      video: "",
+      selectedThumbnailFile: null,
+      selectedSourceFile:null
     },
+    onSubmit: async () => {
+      try {
+        const formData = new FormData();
+        formData.append('productName', formik.values.productName);
+        formData.append('productDescription', formik.values.productDescription);
+        formData.append('productCategory', formik.values.productCategory);
+        formData.append('ageCategory', formik.values.ageCategory);
+        formData.append('price', formik.values.price);
+        formData.append('free', formik.values.free);
+        formData.append('thumbnail', formik.values.selectedThumbnailFile);
+        formData.append('source', formik.values.selectedSourceFile);
 
-    onSubmit:async (values)=>{
-      // setLoding(true)
-      const body = {
-  
-          productName : values.productName,
-          productCategory : values.productCategory,
-          ageCategory:values.ageCategory,
-          price : values.price,
-          free :values.free,
-          
-  
-    }
-    console.log(body,";;;;;;;;;;");
-    console.log(image,"lllllllllllllllllllllllllllllll");
-
-  }
+        console.log(formData,"formData coming frontendd");
+        const response = await axios.post('/admin/addProducts',formData);
+        console.log(response.data);
+      } catch (err) {
+        console.error("Error submitting form:", err);
+      }
+    },
   });
 
-
- 
   return (
     <div className="main-item-adding">
-      <h1> Add your Product item </h1>
-      <form onSubmit={formik.handleSubmit} className="itemsadding-form" enctype="multipart/form-data" >
+      <h1>Add your Product item</h1>
+      <form onSubmit={formik.handleSubmit} className="itemsadding-form">
         <input
           type="text"
           placeholder="Enter Product Name"
@@ -66,29 +57,20 @@ const Productitems = ({onClose}) => {
           value={formik.values.productDescription}
           onChange={formik.handleChange}
         />
-<br></br>
-         <div className="age-cat">
+        <br></br>
+        <div className="age-cat">
           <label>Category</label>
-          <select id="ageCategory" 
-          name="ageCategory"
-          value={formik.values.ageCategory}
-          onChange={formik.handleChange}>
-
+          <select id="productCategory" name="productCategory" value={formik.values.productCategory} onChange={formik.handleChange}>
             <option value="Comic">Comic</option>
             <option value="AudioComic">Audio-Comic</option>
             <option value="Podcast">Podcast</option>
             <option value="Workshop">Workshop</option>
-  
           </select>
         </div>
         <br></br>
         <div className="age-cat">
           <label>Age Category</label>
-          <select id="ageCategory" 
-          name="ageCategory"
-          value={formik.values.ageCategory}
-          onChange={formik.handleChange}>
-
+          <select id="ageCategory" name="ageCategory" value={formik.values.ageCategory} onChange={formik.handleChange}>
             <option value="6-10">6-10</option>
             <option value="10-12">10-12</option>
             <option value="13-17">13-17</option>
@@ -97,55 +79,28 @@ const Productitems = ({onClose}) => {
             <option value="parentsorcarers">parents or carers</option>
           </select>
         </div>
-
         <br></br>
-        {/* <div className="video">
-          <label>Video </label>
-          <input type="file"
-         
-          id="video"
-          name="video"
-          onChange={handleChange} />
-        </div>
-
-        <br></br> */}
-
-        {/* <div className="pdf">
-          <label>Pdf </label>
-          <input type="file"
-          value="pdf"
-          id="pdf" 
-           name="pdf" 
-           onChange={handleChange} 
-            />
-        </div> */}
-
         <div className="pdf">
-          <label>pdf </label>
-          <input type="file"
-         accept=".pdf"
-          id="image" 
-           name="image" 
-           onChange={handleChange} 
-            />
+          <label>Thumbnail</label>
+          <input type="file" name="thumbnail" id="thumbnail" onChange={(event) => formik.setFieldValue('selectedThumbnailFile', event.target.files[0])} />
         </div>
-
         <br></br>
-        <input type="text"
-        id="free" name="free"
-         placeholder="free"
-          value={formik.values.free}  onChange={formik.handleChange} />
+        <div className="pdf">
+          <label>source</label>
+          <input type="file" name="source" id="source" onChange={(event) => formik.setFieldValue('selectedSourceFile', event.target.files[0])} />
+        </div>
+        <br></br>
+        <input type="text" id="free" name="free" placeholder="free" value={formik.values.free} onChange={formik.handleChange} />
         <br></br>
         <input
           type="text"
-          id="price" name="price"
+          id="price"
+          name="price"
           placeholder="Enter Product Price"
           value={formik.values.price}
           onChange={formik.handleChange}
         />
-        <button type="submit"
-        onClick={onClose}
-        > Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
