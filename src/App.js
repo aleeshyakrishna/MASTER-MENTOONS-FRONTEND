@@ -2,7 +2,7 @@ import React,{useState,useEffect}   from 'react';
 import Home from './Pages/Home.js';
 import './App.css';
 import Signin from './Pages/Signin.js';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route,Navigate } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import loding from '../src/animation/loding.json'
 import Jobapply from './components/Jobapply.js'
@@ -16,10 +16,12 @@ import Mentoonstore from './Pages/Mentoonstore.js';
 import Productdetails from './Pages/Productdetails.js'
 import Cart from './Pages/Cart.js'
 import Additems from './Pages/Additems.js'
+import { useSelector } from "react-redux";
 
 
 function App() {
 const [ loading , setloading] = useState (false)
+const token = useSelector((state) => state.user?.Token);
 
 useEffect(()=>{
   setloading(true)
@@ -27,6 +29,7 @@ useEffect(()=>{
     setloading(false)
   }, 5000);
 },[])
+
 
 
   return (
@@ -49,9 +52,9 @@ useEffect(()=>{
             <Route path='/Jobapply' element={<Jobapply />} />
             <Route path='/Logbtn' element={<Logbtn />} />
             <Route path='/Signup' element={<Signup />} />
-            <Route path='/Signin' element={<Signin />} />
+            <Route path='/Signin' element={!token ? <Signin /> :<Navigate to='/'/>} />
             <Route path='/Logbtn' element={<Logbtn />} />
-            <Route path='/Cart' element={<Cart />} />
+            <Route path='/Cart' element={!token ? <Signin /> : <Navigate to="/Cart" />} />
             <Route path='/Additems' element={<Additems />} />
             <Route path='/Productdetails/:id' element={<Productdetails/>} />
             
